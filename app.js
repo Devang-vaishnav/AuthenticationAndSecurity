@@ -21,7 +21,7 @@ async function main() {
 //   var secret = process.env.SECRET;
 //   userSchema.plugin(encrypt, { secret: secret , encryptedFields: ["password"]});
 
-  const User = mongoose.model('user', userSchema);
+const User = mongoose.model('user', userSchema);
 
 
 const app = express();
@@ -60,6 +60,7 @@ app.post("/register", (req,res) => {
     });
 });
 
+//Level 4 - Salting and Hashing password using bcrypt is not implemented because we are unable to download bcrypt.
 
 app.post("/login", (req,res) => {
     // try {
